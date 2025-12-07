@@ -5,6 +5,7 @@ from . import views
 from django.views.generic import TemplateView
 from .views import registration
 
+
 app_name = 'djangoapp'
 
 urlpatterns = [
@@ -19,6 +20,10 @@ urlpatterns = [
     path('logout/', views.logout_user, name='logout'),
     
     # other routes (dealer reviews, add review)...
+    path('get_cars/', views.get_cars, name='getcars'),
+
+    
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
